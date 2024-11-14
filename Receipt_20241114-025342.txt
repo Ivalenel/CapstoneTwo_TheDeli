@@ -1,0 +1,11 @@
+Order Receipt
+Date and Time: 2024-11-14 02:53:42
+
+Sandwiches:
+  - Sandwich (Size: large, Bread: white, Toppings: Steak ($3.0), Swiss Cheese ($2.25), Lettuce ($0.0), Onions ($0.0), Tomatoes ($0.0), Mayo ($0.0), Au Jus ($0.0), Extra Toppings: Total Price: $13.75)
+Drinks:
+  - Drink (Flavor: cola, Size: large, Price: $3.0)
+Chips:
+  - Chips (Flavor: original, Price: $1.5)
+
+Total Price: $18.25

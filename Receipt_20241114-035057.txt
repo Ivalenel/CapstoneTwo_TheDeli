@@ -1,0 +1,11 @@
+Order Receipt
+Date and Time: 2024-11-14 03:50:57
+
+Sandwiches:
+  - Sandwich (Size: large, Bread: white, Toppings: Bacon ($3.0), American Cheese ($2.25), Guacamole ($0.0), Pickles ($0.0), Lettuce ($0.0), Onions ($0.0), Mayo ($0.0), Ketchup ($0.0), Extra Toppings: Roast Beef ($4.5), American Cheese ($3.375), Total Price: $21.625)
+Drinks:
+  - Drink (Flavor: lemon lime, Size: large, Price: $3.0)
+Chips:
+  - Chips (Flavor: cheddar cheese, Price: $1.5)
+
+Total Price: $26.125

@@ -1,0 +1,11 @@
+Order Receipt
+Date and Time: 2024-11-14 03:56:53
+
+Sandwiches:
+  - Sandwich (Size: small, Bread: wrap, Toppings: Chicken ($1.0), Swiss Cheese ($0.75), Guacamole ($0.0), Lettuce ($0.0), Peppers ($0.0), Mayo ($0.0), Extra Toppings: Total Price: $7.25)
+Drinks:
+  - Drink (Flavor: cola, Size: small, Price: $2.0)
+Chips:
+  - Chips (Flavor: original, Price: $1.5)
+
+Total Price: $10.75
