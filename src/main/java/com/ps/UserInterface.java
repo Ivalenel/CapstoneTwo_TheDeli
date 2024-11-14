@@ -17,6 +17,7 @@ public class UserInterface {
         int mainCommand;
 
         do {
+            System.out.println("\nWelcome to Iva's Deli!");
             System.out.println("Please choose an option:");
             System.out.println("1) New Order");
             System.out.println("0) Exit");
@@ -44,11 +45,11 @@ public class UserInterface {
 
         do {
             System.out.println("\nWhat would you like to do?");
-            System.out.println("1) Add Sandwich");
-            System.out.println("2) Add Drink");
-            System.out.println("3) Add Chips");
-            System.out.println("4) Checkout");
-            System.out.println("5) Cancel Order");
+            System.out.println("1) Add Sandwich \uD83E\uDD6A");
+            System.out.println("2) Add Drink \uD83E\uDD64");
+            System.out.println("3) Add Chips \uD83C\uDF5F");
+            System.out.println("4) Checkout \uD83D\uDED2");
+            System.out.println("5) Cancel Order \uD83D\uDEAB");
 
             System.out.print("Selection: ");
             orderCommand = scanner.nextInt();
@@ -79,25 +80,25 @@ public class UserInterface {
 
     private static void handleAddSandwich() {
         String bread = getValidBread();
-        System.out.print("Select sandwich size (Small, Medium, Large): ");
+        System.out.print("Select sandwich size (Small: 4 inch, Medium: 4 inch, Large: 12 inch): ");
         String size = scanner.nextLine().toLowerCase();
 
         Sandwich sandwich = new Sandwich(size, bread);
 
         // Select meat toppings
-        System.out.println("Choose meats- Steak, Ham, Salami, Roast Beef, Chicken, Bacon (type 'done' when finished): ");
+        System.out.println("Choose meats \uD83C\uDF56 \uD83E\uDD69 \uD83C\uDF57 \uD83E\uDD53- Steak, Ham , Salami, Roast Beef, Chicken, Bacon (type 'done' when finished): ");
         selectToppings(sandwich, "meat");
 
         // Select cheese toppings
-        System.out.println("Choose cheeses- American Cheese, Provolone Cheese, Cheddar Cheese, Swiss Cheese, (type 'done' when finished): ");
+        System.out.println("Choose cheeses \uD83E\uDDC0- American Cheese, Provolone Cheese, Cheddar Cheese, Swiss Cheese, (type 'done' when finished): ");
         selectToppings(sandwich, "cheese");
 
         // Select regular toppings
-        System.out.println("Choose regular toppings- Lettuce, Peppers, Onions, Tomatoes, Jalapenos, Cucumbers, Pickles, Guacamole, Mushrooms (type 'done' when finished): ");
+        System.out.println("Choose regular toppings \uD83E\uDD6C \uD83E\uDDC5 \uD83C\uDF45 \uD83E\uDD51- Lettuce, Peppers, Onions, Tomatoes, Jalapenos, Cucumbers, Pickles, Guacamole, Mushrooms (type 'done' when finished): ");
         selectToppings(sandwich, "regular");
 
         // Select sauces
-        System.out.println("Choose sauces- Mayo, Mustard, Ketchup, Ranch, Thousand Islands, Vinaigrette, Au Jus (type 'done' when finished): ");
+        System.out.println("Choose sauces \uD83E\uDDF4 \uD83C\uDF72- Mayo, Mustard, Ketchup, Ranch, Thousand Islands, Vinaigrette, Au Jus (type 'done' when finished): ");
         selectToppings(sandwich, "sauce");
 
         // Confirm and add sandwich to order
@@ -108,7 +109,7 @@ public class UserInterface {
     private static String getValidBread() {
         String bread;
         while (true) {
-            System.out.print("Select your bread (White, Wheat, Rye, Wrap): ");
+            System.out.print("Select your bread \uD83C\uDF5E \uD83E\uDD56 (White, Wheat, Rye, Wrap): ");
             bread = scanner.nextLine().toLowerCase();
             if (bread.equals("white") || bread.equals("wheat") || bread.equals("rye") || bread.equals("wrap")) {
                 break;
@@ -226,7 +227,7 @@ public class UserInterface {
         System.out.print("Select drink size (Small, Medium, Large): ");
         String size = scanner.nextLine().toLowerCase();
 
-        System.out.print("Select flavor (Cola, Orange, Grape, Lemon Lime, Root Beer): ");
+        System.out.print("Select flavor \uD83C\uDF4A \uD83C\uDF47 \uD83C\uDF4B \uD83C\uDF7A (Cola, Orange, Grape, Lemon Lime, Root Beer): ");
         String flavor = scanner.nextLine().toLowerCase();
 
         // Create a new Drink instance
@@ -237,7 +238,7 @@ public class UserInterface {
     }
 
     private static void handleAddChips() {
-        System.out.print("Select chip flavor (Original, Sour Cream & Onion, Barbecue, Cheddar Cheese): ");
+        System.out.print("Select chip flavor \uD83C\uDF5F, \uD83E\uDDC5, \uD83D\uDD25, \uD83E\uDDC0 (Original, Sour Cream & Onion, Barbecue, Cheddar Cheese): ");
         String flavor = scanner.nextLine();
 
         // Create a new Chips instance
@@ -245,7 +246,7 @@ public class UserInterface {
         order.addChips(chips);
 
         // Display the chip details with price
-        System.out.println("Chips added to your order! Details: " + chips);
+        System.out.println("Chips added to your order!");
     }
 
     private static void handleCheckout() {
@@ -259,7 +260,7 @@ public class UserInterface {
         if (confirm.equalsIgnoreCase("yes")) {
             order.saveReceipt(); // Save receipt to a timestamped file
             order.saveToCsv(); // Append order to DeliOrders.csv in a formatted way
-            System.out.println("Order confirmed. Receipt and CSV updated.");
+            System.out.println("Order confirmed. \uD83E\uDDFE");
             order = new Order(); // Clear the current order after checkout
             return; // Exit the method to prevent calling handleNewOrder
         } else {

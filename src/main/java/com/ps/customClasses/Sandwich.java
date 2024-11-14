@@ -97,12 +97,4 @@ public class Sandwich {
         return details.toString();
     }
 
-    // Getters for size and bread, if needed
-    public String getSize() {
-        return size;
-    }
-
-    public String getBread() {
-        return bread;
-    }
 }

@@ -37,10 +37,6 @@ public class Chips extends Product {
 
     }
 
-    public String getFlavor() {
-        return flavor;
-    }
-
     // toString method to display information about the chips
     @Override
     public String toString() {
