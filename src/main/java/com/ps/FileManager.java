@@ -23,7 +23,7 @@ public class FileManager {
         }
     }
 
-    // Append order to a formatted CSV file
+    // Add order to a formatted CSV file
     public static void saveToCsv(String orderDetails, double totalPrice) {
         String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
 

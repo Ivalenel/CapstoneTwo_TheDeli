@@ -1,0 +1,17 @@
+Order Receipt
+Date and Time: 2024-11-15 08:41:42
+
+
+✨✨✨ Welcome to Iva's Deli! ✨✨✨
+-------------------------------------------
+🍞 Sandwiches:
+   🥪 Sandwich (Size: small, Bread: white, Toasted: Yes, Toppings: Steak ($1.0), Swiss Cheese ($0.75), Lettuce ($0.0), Mayo ($0.0), Mustard ($0.0), Extra Toppings: Total Price: $7.25)
+🥤 Drinks:
+   🧃 Drink (Flavor: grape, Size: large, Price: $3.0)
+🍟 Chips:
+   (No chips ordered)
+
+💵 Total Price: $10.25
+-------------------------------------------
+🧾 Thank you for dining with us! 🧾
+💖 Have a wonderful day! 💖

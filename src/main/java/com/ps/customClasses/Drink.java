@@ -59,15 +59,6 @@ public class Drink extends Product {
 
     }
 
-    // Getters
-    public String getSize() {
-        return size;
-    }
-
-    public String getFlavor() {
-        return flavor;
-    }
-
     // toString method to display drink information
     @Override
     public String toString() {

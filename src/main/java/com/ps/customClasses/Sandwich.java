@@ -6,6 +6,7 @@ import java.util.List;
 public class Sandwich {
     private String size;
     private String bread;
+    private boolean isToasted;
     private List<Topping> toppings;
     private List<Topping> extraToppings;
 
@@ -17,8 +18,9 @@ public class Sandwich {
     private static final double MEDIUM_PRICE = 7.00;
     private static final double LARGE_PRICE = 8.50;
 
-    public Sandwich(String size, String bread) {
+    public Sandwich(String size, String bread, boolean isToasted) {
         this.size = size.toLowerCase();
+        this.isToasted = isToasted;
         setBread(bread);  // Use the setter to validate bread choice
         this.toppings = new ArrayList<>();
         this.extraToppings = new ArrayList<>();
@@ -82,8 +84,16 @@ public class Sandwich {
     // Override toString to display sandwich details
     @Override
     public String toString() {
-        StringBuilder details = new StringBuilder("Sandwich (Size: " + size + ", Bread: " + bread + ", Toppings: ");
+        StringBuilder details = new StringBuilder("Sandwich (Size: " + size + ", Bread: " + bread);
 
+        // Include toasted status in the output
+        if (isToasted) {
+            details.append(", Toasted: Yes");
+        } else {
+            details.append(", Toasted: No");
+        }
+
+        details.append(", Toppings: ");
         for (Topping topping : toppings) {
             details.append(topping.getName()).append(" ($").append(topping.getPrice(size)).append("), ");
         }
@@ -96,5 +106,4 @@ public class Sandwich {
         details.append("Total Price: $").append(getPrice()).append(")");
         return details.toString();
     }
-
 }

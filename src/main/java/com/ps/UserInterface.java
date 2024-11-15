@@ -82,8 +82,9 @@ public class UserInterface {
         String bread = getValidBread();
         System.out.print("Select sandwich size (Small: 4 inch, Medium: 4 inch, Large: 12 inch): ");
         String size = scanner.nextLine().toLowerCase();
+        boolean isToasted = getToastedOption();
 
-        Sandwich sandwich = new Sandwich(size, bread);
+        Sandwich sandwich = new Sandwich(size, bread, isToasted);
 
         // Select meat toppings
         System.out.println("Choose meats \uD83C\uDF56 \uD83E\uDD69 \uD83C\uDF57 \uD83E\uDD53- Steak, Ham , Salami, Roast Beef, Chicken, Bacon (type 'done' when finished): ");
@@ -120,6 +121,19 @@ public class UserInterface {
         return bread;
     }
 
+    private static boolean getToastedOption() {
+        while (true) {
+            System.out.print("Would you like your sandwich toasted? (yes/no): ");
+            String toastedInput = scanner.nextLine().toLowerCase();
+            if (toastedInput.equals("yes")) {
+                return true;
+            } else if (toastedInput.equals("no")) {
+                return false;
+            } else {
+                System.out.println("Invalid input. Please type 'yes' or 'no'.");
+            }
+        }
+    }
     private static void selectToppings(Sandwich sandwich, String category) {
         while (true) {
             System.out.print("Enter topping name (type 'extra' before the name for extra portion, or 'done' to finish): ");
@@ -230,7 +244,7 @@ public class UserInterface {
         System.out.print("Select flavor \uD83C\uDF4A \uD83C\uDF47 \uD83C\uDF4B \uD83C\uDF7A (Cola, Orange, Grape, Lemon Lime, Root Beer): ");
         String flavor = scanner.nextLine().toLowerCase();
 
-        // Create a new Drink instance
+        // New Drink instance
         Drink drink = new Drink(flavor, size);
         order.addDrink(drink);
 
@@ -241,7 +255,7 @@ public class UserInterface {
         System.out.print("Select chip flavor \uD83C\uDF5F, \uD83E\uDDC5, \uD83D\uDD25, \uD83E\uDDC0 (Original, Sour Cream & Onion, Barbecue, Cheddar Cheese): ");
         String flavor = scanner.nextLine();
 
-        // Create a new Chips instance
+        // New Chips instance
         Chips chips = new Chips(flavor);
         order.addChips(chips);
 
@@ -259,9 +273,9 @@ public class UserInterface {
 
         if (confirm.equalsIgnoreCase("yes")) {
             order.saveReceipt(); // Save receipt to a timestamped file
-            order.saveToCsv(); // Append order to DeliOrders.csv in a formatted way
+            order.saveToCsv(); // Add order to DeliOrders.csv in a formatted way
             System.out.println("Order confirmed. \uD83E\uDDFE");
-            order = new Order(); // Clear the current order after checkout
+            order = new Order(); // Clear the current order
             return; // Exit the method to prevent calling handleNewOrder
         } else {
             System.out.println("Order canceled. Returning to order menu.");

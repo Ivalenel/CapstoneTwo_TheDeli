@@ -40,7 +40,6 @@ public class Order {
         return sandwichTotal + drinksTotal + chipsTotal;
     }
 
-    // Save order details to DeliOrders.csv
 
     // Save receipt to file
     public void saveReceipt() {
@@ -48,36 +47,54 @@ public class Order {
         FileManager.saveReceipt(orderSummary);
     }
 
-    // Append order to DeliOrders.csv
+    // Add order to DeliOrders.csv
     public void saveToCsv() {
         String orderDetails = this.formatOrderDetails();
         FileManager.saveToCsv(orderDetails, getPrice());
     }
 
-    // Format order details in a readable structure
+    // Make details readable
     private String formatOrderDetails() {
         StringBuilder details = new StringBuilder();
 
-        details.append("Sandwiches:\n");
+        details.append("\n");
+        details.append("✨✨✨ Welcome to Iva's Deli! ✨✨✨\n");
+        details.append("-------------------------------------------\n");
+
+        details.append("🍞 Sandwiches:\n");
         for (Sandwich sandwich : sandwiches) {
-            details.append("  - ").append(sandwich).append("\n");
+            details.append("   🥪 ").append(sandwich).append("\n");
+        }
+        if (sandwiches.isEmpty()) {
+            details.append("   (No sandwiches ordered)\n");
         }
 
-        details.append("Drinks:\n");
+        details.append("🥤 Drinks:\n");
         for (Drink drink : drinks) {
-            details.append("  - ").append(drink).append("\n");
+            details.append("   🧃 ").append(drink).append("\n");
+        }
+        if (drinks.isEmpty()) {
+            details.append("   (No drinks ordered)\n");
         }
 
-        details.append("Chips:\n");
+        details.append("🍟 Chips:\n");
         for (Chips chip : chips) {
-            details.append("  - ").append(chip).append("\n");
+            details.append("   🍿 ").append(chip).append("\n");
+        }
+        if (chips.isEmpty()) {
+            details.append("   (No chips ordered)\n");
         }
 
-        details.append("\nTotal Price: $").append(getPrice());
+        details.append("\n");
+        details.append("💵 Total Price: $").append(String.format("%.2f", getPrice())).append("\n");
+        details.append("-------------------------------------------\n");
+        details.append("🧾 Thank you for dining with us! 🧾\n");
+        details.append("💖 Have a wonderful day! 💖\n");
+
         return details.toString();
     }
 
-    // Override toString for displaying the order in the console
+    // Override toString for displaying the order
     @Override
     public String toString() {
         return formatOrderDetails();

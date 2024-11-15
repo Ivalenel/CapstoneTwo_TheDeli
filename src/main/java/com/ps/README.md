@@ -33,3 +33,6 @@
 #### CSV Logging for Order Summaries:
 
 #### The saveToCsv method appends each order to a single CSV file (DeliOrders.csv), which is useful for summarizing all orders in one place. Each entry includes the timestamp, total price, and detailed order content, making it easy to review all orders over time.
+
+# Added Receipt Feature!
+

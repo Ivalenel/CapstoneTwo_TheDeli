@@ -7,7 +7,7 @@ public class Topping {
     private double mediumPrice;
     private double largePrice;
 
-    // Constructor for toppings with specific prices
+    // Constructor for toppings with prices
     public Topping(String name, String type, double smallPrice, double mediumPrice, double largePrice) {
         this.name = name;
         this.type = type;
@@ -16,7 +16,7 @@ public class Topping {
         this.largePrice = largePrice;
     }
 
-    // Constructor for included toppings (price is zero for all sizes)
+    // Constructor for included toppings
     public Topping(String name, String type) {
         this(name, type, 0.0, 0.0, 0.0);
     }
@@ -42,7 +42,7 @@ public class Topping {
                 throw new IllegalArgumentException("Invalid sandwich size");
         }
     }
-    // Predefined instances of Topping
+    // Instances of Topping
     public static final Topping STEAK = new Topping("Steak", "meat", 1.00, 2.00, 3.00);
     public static final Topping HAM = new Topping("Ham", "meat", 1.00, 2.00, 3.00);
     public static final Topping SALAMI = new Topping("Salami", "meat", 1.00, 2.00, 3.00);
@@ -74,7 +74,5 @@ public class Topping {
     public static final Topping RANCH = new Topping("Ranch", "sauce");
     public static final Topping THOUSAND_ISLANDS = new Topping("Thousand Islands", "sauce");
     public static final Topping VINAIGRETTE = new Topping("Vinaigrette", "sauce");
-
-    // Sides included at no extra cost
     public static final Topping AU_JUS = new Topping("Au Jus", "sauce");
 }
