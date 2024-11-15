@@ -12,18 +12,18 @@
 ## Application Screenshots
 
 ### Main Ordering Interface
-![img.png](../../../../../Images%20For%20Read%20Me/img.png)
+![img.png](Images For Read Me/img.png)
 ## Sandwich Customization Screen
-![img_4.png](../../../../../Images%20For%20Read%20Me/img_4.png)
+![img_4.png](Images For Read Me/img_4.png)
 ## Drink Screen
-![img_2.png](../../../../../Images%20For%20Read%20Me/img_2.png)
+![img_2.png](Images For Read Me/img_2.png)
 ## Chips Screen
-![img_3.png](../../../../../Images%20For%20Read%20Me/img_3.png)
+![img_3.png](Images For Read Me/img_3.png)
 ## Order Summary Screen
-![img_5.png](../../../../../Images%20For%20Read%20Me/img_5.png)
+![img_5.png](Images For Read Me/img_5.png)
 
 ## Favorite Piece Of Code
-![img_1.png](../../../../../Images%20For%20Read%20Me/img_1.png)
+![img_1.png](Images For Read Me/img_1.png)
 
 ### Why? 
 
