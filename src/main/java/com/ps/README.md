@@ -36,3 +36,13 @@
 
 # Added Receipt Feature!
 
+## Before
+![Old Receipt.PNG](..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FDownloads%2FOld%20Receipt.PNG)
+
+## After
+![New Receipt.PNG](..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FDownloads%2FNew%20Receipt.PNG)
+
+# Diagram
+![Diagram (1).png](..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FDownloads%2FDiagram%20%281%29.png)
+
+

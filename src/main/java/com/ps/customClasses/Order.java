@@ -59,7 +59,7 @@ public class Order {
 
         details.append("\n");
         details.append("✨✨✨ Welcome to Iva's Deli! ✨✨✨\n");
-        details.append("-------------------------------------------\n");
+        details.append("---------------------------------\n");
 
         details.append("🍞 Sandwiches:\n");
         for (Sandwich sandwich : sandwiches) {
@@ -87,7 +87,7 @@ public class Order {
 
         details.append("\n");
         details.append("💵 Total Price: $").append(String.format("%.2f", getPrice())).append("\n");
-        details.append("-------------------------------------------\n");
+        details.append("----------------------------------\n");
         details.append("🧾 Thank you for dining with us! 🧾\n");
         details.append("💖 Have a wonderful day! 💖\n");
 
